@@ -1,0 +1,6 @@
+/* Matching highlights for named report source cells. */
+.source-blue { --source-fill: #e0efff; --source-border: #2367a5; }
+.source-green { --source-fill: #dff5e8; --source-border: #20734a; }
+.source-purple { --source-fill: #eee3ff; --source-border: #7950b0; }
+.source-orange { --source-fill: #fff0d8; --source-border: #a5650d; }
+.source-linked { background: var(--source-fill) !important; box-shadow: inset 0 0 0 2px var(--source-border) !important; }

@@ -1,0 +1,11 @@
+# macOS
+.DS_Store
+
+# Local exports and backups
+*.zip
+_backups/
+*.original.html
+
+# Original browser saves (use the maintained pages instead)
+ក្បាលបញ្ជី.html
+ក្បាលបញ្ជី_files/

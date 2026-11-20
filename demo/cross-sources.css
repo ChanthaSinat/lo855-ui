@@ -1,0 +1,3 @@
+#accountingList a[data-report-source] { color: #174f86; text-decoration: underline; text-underline-offset: 3px; }
+.cross-result-source { display: inline-block; min-width: 32px; min-height: 1em; padding: 2px 5px; }
+td.cross-result-source { display: table-cell; }

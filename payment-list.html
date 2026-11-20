@@ -1,0 +1,906 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="google" content="notranslate" />
+    <title>&#x1796;&#x17B7;&#x1793;&#x17B7;&#x178F;&#x17D2;&#x1799;&#x1794;&#x1789;&#x17D2;&#x1787;&#x17B8;</title>
+    <link href="./assets/css/main.css?v=cross2" rel="stylesheet" />
+    <link href="./assets/css/select2.min.css?v=cross2" rel="stylesheet" />
+    <link href="./assets/css/responsive.css?v=cross2" rel="stylesheet" />
+    
+    <link href="./assets/css/main-old.css?v=cross2" rel="stylesheet" />
+    <style>
+        .table-row thead th {
+            text-align: center;
+            padding: 4px
+        }
+
+        .table-row .tr-row:nth-child(even) {
+            background: #FFFFFF;
+        }
+
+        .table-row .tr-row:nth-child(odd) {
+            background: #DCDDDE;
+        }
+
+        #accountingList tr.tr-row:hover {
+            background: #FF9966 !important;
+        }
+
+        .table-data {
+            font-size: 13px;
+            padding-left: 7px;
+            padding-right: 7px;
+            border-bottom: 1px solid rgb(183, 194, 208);
+            border-right: 1px solid rgb(183, 194, 208);
+            height: 30px;
+            text-align: left;
+        }
+
+        .table-header {
+            font-size: 13px;
+            padding-left: 7px;
+            padding-right: 7px;
+            border-top: 1px solid rgb(183, 194, 208);
+            border-bottom: 1px solid rgb(183, 194, 208);
+            border-right: 1px solid rgb(183, 194, 208);
+        }
+    </style>
+
+<link rel="stylesheet" href="./calculators/calculators.css?v=cross2">
+<link rel="stylesheet" href="./demo/local-preview.css?v=cross2">
+<link rel="stylesheet" href="./demo/show-sources.css?v=cross2">
+<link rel="stylesheet" href="./demo/cross-sources.css?v=cross2">
+</head>
+<body>
+    <header class="header">
+        <ul class="menu">
+                <li><a href="/client/" class="">&#x1797;&#x17D2;&#x1793;&#x17B6;&#x1780;&#x17CB;&#x1784;&#x17B6;&#x179A;</a></li>
+                <li><a href="/post/" class="">&#x1794;&#x17C9;&#x17BB;&#x179F;&#x17D2;&#x178F;&#x17CF;</a></li>
+                <li><a href="/post/time/" class="">&#x1798;&#x17C9;&#x17C4;&#x1784;&#x1794;&#x17B7;&#x1791;</a></li>
+                <li><a href="/show/" class="">&#x1794;&#x1784;&#x17D2;&#x17A0;&#x17B6;&#x1789;&#x179F;&#x17B6;&#x1784;</a></li>
+                <li><a href="/verify/" class="">&#x1795;&#x17D2;&#x1791;&#x17C0;&#x1784;&#x179B;&#x17C1;&#x1781;&#x178F;&#x17D2;&#x179A;&#x17BC;&#x179C;</a></li>
+                <li><a href="/sary/" class="">&#x179F;&#x17B6;&#x179A;&#x17B8;</a></li>
+                <li><a href="./result.html" class="" rel="noopener" data-local-page="result.html">&#x1780;&#x17D2;&#x1794;&#x17B6;&#x179B;&#x1794;&#x1789;&#x17D2;&#x1787;&#x17B8;</a></li>
+                <li><a href="./payment-list.html" class="active" data-local-page="payment-list.html">&#x1796;&#x17B7;&#x1793;&#x17B7;&#x178F;&#x17D2;&#x1799;&#x1794;&#x1789;&#x17D2;&#x1787;&#x17B8;</a></li>
+                <li><a href="/payment/" class="">&#x179F;&#x17CA;&#x17B8;&#x179F;&#x1784;</a></li>
+                <li><a href="/account/changepassword" class="">&#x1794;&#x17D2;&#x178A;&#x17BC;&#x179A;&#x1796;&#x17B6;&#x1780;&#x17D2;&#x1799;&#x179F;&#x17C6;&#x1784;&#x17B6;&#x178F;&#x17CB;</a></li>
+                <li><a href="/client/howtoplay/" class="">&#x179A;&#x1794;&#x17C0;&#x1794;&#x1785;&#x17B6;&#x1780;&#x17CB;</a></li>
+                <li><a href="/account/logout/" class="">&#x1785;&#x17C1;&#x1789;</a></li>
+        </ul>
+    </header>
+    <div class="wrapper-content">
+        
+<div class="">
+    <div>
+        <label class="custom-label">ចាប់ពី</label>
+        <input type="datetime" id="fromDate" class="custom-date" />
+        <label class="custom-label">ដល់</label>
+        <input type="datetime" id="toDate" class="custom-date" />
+        <label class="custom-label">តាមរយះ</label>
+        <select id="clientId" class="custom-input select-search" style="width:190px">
+            <option value="2833">Admin</option>
+                <option value="0">សរុបកូនក្រុម</option>
+                    <option value="11442">A-A01 90/800</option>
+                    <option value="4425">A-A02 90/800</option>
+                    <option value="7929">A-A03 &#x1785;&#x17C2;&#x179B;&#x17B8;&#x1793;</option>
+                    <option value="5686">A-A04 90/800 </option>
+                    <option value="9451">A-A1</option>
+                    <option value="10705">B-914B&#x17A0;&#x17B6;&#x1798;&#x179C;&#x17C9;&#x17C3;</option>
+                    <option value="3724">B-B01 90/800 </option>
+                    <option value="7967">B-B04 &#x1794;&#x1784;&#x178A;&#x17B6;</option>
+                    <option value="6529">B-B05 80/800</option>
+                    <option value="11221">M-M20</option>
+                    <option value="8421">00-D</option>
+                    <option value="9310">01-ABC</option>
+                    <option value="12480">A -M01 90/800</option>
+                    <option value="12477">A -M22 90/800</option>
+                    <option value="11240">B -B02 BTy 90/800</option>
+                    <option value="11674">BH-#OT 90/800</option>
+                    <option value="11609">BH-#RT 90/800</option>
+                    <option value="11813">BH-Rotha B</option>
+                    <option value="11611">BH-&#x1798;&#x17B6;&#x179F;&#x1796;&#x17C1;&#x1787;&#x17D2;&#x179A; VN KH</option>
+                    <option value="8395">Dy-C</option>
+                    <option value="10729">000-Sorng </option>
+                    <option value="12258">100-B ty sang SN </option>
+                    <option value="10956">100-SKH Line </option>
+                    <option value="10943">101-101 90/800 M86</option>
+                    <option value="5837">102-102A&#x17A0;&#x17B6;&#x1798;&#x179C;&#x17C9;&#x17C3;</option>
+                    <option value="2847">103-103 90/800 MK</option>
+                    <option value="9890">104-104B&#x17A0;&#x17B6;&#x1798;&#x179C;&#x17C9;&#x17C3;</option>
+                    <option value="12531">105-F105 90/800</option>
+                    <option value="4483">107-107A&#x17A0;&#x17B6;&#x1798;&#x179C;&#x17C9;&#x17C3;</option>
+                    <option value="7835">107-107B &#x1794;&#x17B7;&#x1791;&#x17A0;&#x17B6;&#x1798;&#x179C;&#x17C9;&#x17C3;</option>
+                    <option value="7275">111-111Boss90/800</option>
+                    <option value="11735">111-&#x1798;&#x17C1;&#x1780;&#x17D2;&#x179A;&#x17BB;&#x1798; 70/600</option>
+                    <option value="11803">111-&#x1798;&#x17C1;&#x1780;&#x17D2;&#x179A;&#x17BB;&#x1798; 95/900</option>
+                    <option value="11027">115-115A&#x17A0;&#x17B6;&#x1798;&#x179C;&#x17C9;&#x17C3;</option>
+                    <option value="11182">115-115B&#x17A0;&#x17B6;&#x1798;&#x179C;&#x17C9;&#x17C3;</option>
+                    <option value="11311">115-115E&#x17A0;&#x17B6;&#x1798;&#x179C;&#x17C9;&#x17C3;</option>
+                    <option value="11312">115-115F&#x17A0;&#x17B6;&#x1798;&#x179C;&#x17C9;&#x17C3;</option>
+                    <option value="11353">115-115G&#x17A0;&#x17B6;&#x1798;&#x179C;&#x17C9;&#x17C3;</option>
+                    <option value="11486">115-115H 70% 90/800</option>
+                    <option value="11485">115-115J&#x17A0;&#x17B6;&#x1798;&#x179C;&#x17C9;&#x17C3;</option>
+                    <option value="11505">115-115K&#x17A0;&#x17B6;&#x1798;&#x179C;&#x17C9;&#x17C3;</option>
+                    <option value="11957">115-115M&#x17A0;&#x17B6;&#x1798;&#x179C;&#x17C9;&#x17C3;</option>
+                    <option value="9733">116-116B 90/800</option>
+                    <option value="12473">118-118A&#x17A0;&#x17B6;&#x1798;&#x179C;&#x17C9;&#x17C3;</option>
+                    <option value="11317">118-118B&#x17A0;&#x17B6;&#x1798;&#x179C;&#x17C9;&#x17C3;</option>
+                    <option value="11918">118-118C 90/800</option>
+                    <option value="12166">118-118E &#x17A0;&#x17B6;&#x1798;&#x179C;&#x17C9;&#x17C3;</option>
+                    <option value="12195">118-118F &#x17A0;&#x17B6;&#x1798;&#x179C;&#x17C9;&#x17C3;</option>
+                    <option value="12198">118-118G &#x17A0;&#x17B6;&#x1798;&#x179C;&#x17C9;&#x17C3;</option>
+                    <option value="12199">118-118H&#x17A0;&#x17B6;&#x1798;&#x179C;&#x17C9;&#x17C3;</option>
+                    <option value="12325">118-118J 90/800</option>
+                    <option value="12200">118-118i&#x17A0;&#x17B6;&#x1798;&#x179C;&#x17C9;&#x17C3;</option>
+                    <option value="11029">120-120 90/800</option>
+                    <option value="9965">122-122 L01&#x17A0;&#x17B6;&#x1798;&#x179C;&#x17C9;&#x17C3;</option>
+                    <option value="9829">122-122A01&#x17A0;&#x17B6;&#x1798;&#x179C;&#x17C9;&#x17C3;</option>
+                    <option value="11379">124-124HH&#x17A0;&#x17B6;&#x1798;&#x179C;&#x17C9;&#x17C3;</option>
+                    <option value="8505">125-125A90/800 KA</option>
+                    <option value="9946">125-125B90/800 KA</option>
+                    <option value="11465">126-126 SSK </option>
+                    <option value="12470">126-126KKT 90/800</option>
+                    <option value="10161">126-126LC89&#x17A0;&#x17B6;&#x1798;&#x179C;&#x17C9;&#x17C3; </option>
+                    <option value="10078">126-126M54&#x17A0;&#x17B6;&#x1798;&#x179C;&#x17C9;&#x17C3; </option>
+                    <option value="9528">126-126MK 90/800</option>
+                    <option value="12427">126-126ML93</option>
+                    <option value="12492">126-126MS </option>
+                    <option value="12406">126-MM15 </option>
+                    <option value="12030">126-&#x1798;&#x17C1;&#x1780;&#x17D2;&#x179A;&#x17BB;&#x1798;SN&#x17A0;&#x17B6;&#x1798;&#x179C;&#x17C9;&#x17C3;</option>
+                    <option value="4420">127-127&#x17A0;&#x17B6;&#x1798;&#x179C;&#x17C9;&#x17C3;</option>
+                    <option value="12594">127-F127 90/800</option>
+                    <option value="7958">129-129&#x17A0;&#x17B6;&#x1798;&#x179C;&#x17C9;&#x17C3;</option>
+                    <option value="8561">130-130 90/800 </option>
+                    <option value="5531">131-131&#x17A0;&#x17B6;&#x1798;&#x179C;&#x17C9;&#x17C3;</option>
+                    <option value="12526">133-133A&#x17A0;&#x17B6;&#x1798;&#x179C;&#x17C9;&#x17C3;</option>
+                    <option value="10178">133-133A&#x17A0;&#x17B6;&#x1798;&#x179C;&#x17C9;&#x17C3;</option>
+                    <option value="10189">133-133B&#x17A0;&#x17B6;&#x1798;&#x179C;&#x17C9;&#x17C3;</option>
+                    <option value="11632">133-133C&#x17A0;&#x17B6;&#x1798;&#x179C;&#x17C9;&#x17C3;</option>
+                    <option value="11877">133-133D&#x17A0;&#x17B6;&#x1798;&#x179C;&#x17C9;&#x17C3;</option>
+                    <option value="7824">134-134A&#x17A0;&#x17B6;&#x1798;&#x179C;&#x17C9;&#x17C3;</option>
+                    <option value="8797">134-134B&#x17A0;&#x17B6;&#x1798;&#x179C;&#x17C9;&#x17C3;</option>
+                    <option value="10707">134-134D&#x17A0;&#x17B6;&#x1798;&#x179C;&#x17C9;&#x17C3;</option>
+                    <option value="3586">135-135&#x17A0;&#x17B6;&#x1798;&#x179C;&#x17C9;&#x17C3;</option>
+                    <option value="9878">136-136A&#x17A0;&#x17B6;&#x1798;&#x179C;&#x17C9;&#x17C3;</option>
+                    <option value="11817">136-136F&#x17A0;&#x17B6;&#x1798;&#x179C;&#x17C9;&#x17C3;</option>
+                    <option value="7376">138-138&#x17A0;&#x17B6;&#x1798;&#x179C;&#x17C9;&#x17C3;</option>
+                    <option value="12399">139-139E01 90/800 M86</option>
+                    <option value="9405">139-139&#x1798;&#x17C1;&#x1780;&#x17D2;&#x179A;&#x17BB;&#x1798;</option>
+                    <option value="10378">140-140B 90/800 M86</option>
+                    <option value="10596">140-140C 90/800 M86</option>
+                    <option value="3546">141-141 90/800</option>
+                    <option value="11473">142-142A10 90/800</option>
+                    <option value="11799">142-142A14 70/600</option>
+                    <option value="10713">142-444A142A11 70/600 </option>
+                    <option value="6115">143-143&#x17A0;&#x17B6;&#x1798;&#x179C;&#x17C9;&#x17C3;</option>
+                    <option value="4228">145-145&#x17A0;&#x17B6;&#x1798;&#x179C;&#x17C9;&#x17C3;</option>
+                    <option value="10753">147-147A&#x17A0;&#x17B6;&#x1798;&#x179C;&#x17C9;&#x17C3;</option>
+                    <option value="11000">147-147B 90/800 CNK3</option>
+                    <option value="11019">149-149 JL01&#x17A0;&#x17B6;&#x1798;&#x179C;&#x17C9;&#x17C3;</option>
+                    <option value="11110">149-149JL02&#x17A0;&#x17B6;&#x1798;&#x179C;&#x17C9;&#x17C3;</option>
+                    <option value="11111">149-149JL03&#x17A0;&#x17B6;&#x1798;&#x179C;&#x17C9;&#x17C3;</option>
+                    <option value="11859">149-149JL04&#x17A0;&#x17B6;&#x1798;&#x179C;&#x17C9;&#x17C3;</option>
+                    <option value="12431">149-149JL05&#x17A0;&#x17B6;&#x1798;&#x179C;&#x17C9;&#x17C3;</option>
+                    <option value="12432">149-149JL06&#x17A0;&#x17B6;&#x1798;&#x179C;&#x17C9;&#x17C3;</option>
+                    <option value="12433">149-149JL07&#x17A0;&#x17B6;&#x1798;&#x179C;&#x17C9;&#x17C3;</option>
+                    <option value="12403">150-150&#x17A0;&#x17B6;&#x1798;&#x179C;&#x17C9;&#x17C3;</option>
+                    <option value="7565">151-151L01&#x17A0;&#x17B6;&#x1798;&#x179C;&#x17C9;&#x17C3;</option>
+                    <option value="7562">151-151L02&#x17A0;&#x17B6;&#x1798;&#x179C;&#x17C9;&#x17C3;</option>
+                    <option value="9754">152-152A&#x17A0;&#x17B6;&#x1798;&#x179C;&#x17C9;&#x17C3;</option>
+                    <option value="11928">152-152B&#x17A0;&#x17B6;&#x1798;&#x179C;&#x17C9;&#x17C3;</option>
+                    <option value="4321">152-152C&#x17A0;&#x17B6;&#x1798;&#x179C;&#x17C9;&#x17C3;</option>
+                    <option value="8372">152-152D&#x17A0;&#x17B6;&#x1798;&#x179C;&#x17C9;&#x17C3;</option>
+                    <option value="9524">152-152E&#x17A0;&#x17B6;&#x1798;&#x179C;&#x17C9;&#x17C3;</option>
+                    <option value="8455">152-152F&#x17A0;&#x17B6;&#x1798;&#x179C;&#x17C9;&#x17C3;</option>
+                    <option value="11296">152-152G1&#x17A0;&#x17B6;&#x1798;&#x179C;&#x17C9;&#x17C3;</option>
+                    <option value="11297">152-152G2&#x17A0;&#x17B6;&#x1798;&#x179C;&#x17C9;&#x17C3;</option>
+                    <option value="11369">152-152G3&#x17A0;&#x17B6;&#x1798;&#x179C;&#x17C9;&#x17C3;</option>
+                    <option value="9180">152-152H&#x17A0;&#x17B6;&#x1798;&#x179C;&#x17C9;&#x17C3;</option>
+                    <option value="11413">152-152K&#x17A0;&#x17B6;&#x1798;&#x179C;&#x17C9;&#x17C3;</option>
+                    <option value="11414">152-152L1&#x17A0;&#x17B6;&#x1798;&#x179C;&#x17C9;&#x17C3;</option>
+                    <option value="11415">152-152L&#x17A0;&#x17B6;&#x1798;&#x179C;&#x17C9;&#x17C3;</option>
+                    <option value="12426">152-152N02&#x17A0;&#x17B6;&#x1798;&#x179C;&#x17C9;&#x17C3;</option>
+                    <option value="12519">152-152i &#x17A0;&#x17B6;&#x1798;&#x179C;&#x17C9;&#x17C3;</option>
+                    <option value="11756">153-153D 70/600 MK</option>
+                    <option value="10940">154-154A&#x17A0;&#x17B6;&#x1798;&#x179C;&#x17C9;&#x17C3;</option>
+                    <option value="11647">154-&#x179B;&#x17C1;&#x1781;</option>
+                    <option value="10720">155-155D&#x17A0;&#x17B6;&#x1798;&#x179C;&#x17C9;&#x17C3;</option>
+                    <option value="6580">157-157&#x17A0;&#x17B6;&#x1798;&#x179C;&#x17C9;&#x17C3;</option>
+                    <option value="10380">158-158T01 90/800 </option>
+                    <option value="11789">158-158T02 </option>
+                    <option value="11790">158-158T03 </option>
+                    <option value="4150">159-159A&#x17A0;&#x17B6;&#x1798;&#x179C;&#x17C9;&#x17C3;</option>
+                    <option value="11937">160-160A</option>
+                    <option value="11719">162-162A 90/800 LC89</option>
+                    <option value="11808">163-163 90/800 M26</option>
+                    <option value="9153">171-171N03 70/600 100%</option>
+                    <option value="9949">174-174A&#x17A0;&#x17B6;&#x1798;&#x179C;&#x17C9;&#x17C3;</option>
+                    <option value="10000">174-174B 90/800 </option>
+                    <option value="10599">177-177C03 90/800</option>
+                    <option value="8566">179-179&#x17A0;&#x17B6;&#x1798;&#x179C;&#x17C9;&#x17C3;</option>
+                    <option value="9535">180-180&#x17A0;&#x17B6;&#x1798;&#x179C;&#x17C9;&#x17C3;</option>
+                    <option value="12499">181-181A01&#x17A0;&#x17B6;&#x1798;&#x179C;&#x17C9;&#x17C3;</option>
+                    <option value="11501">181-181A02&#x17A0;&#x17B6;&#x1798;&#x179C;&#x17C9;&#x17C3;</option>
+                    <option value="11351">181-181A06&#x17A0;&#x17B6;&#x1798;&#x179C;&#x17C9;&#x17C3;</option>
+                    <option value="8577">182-182&#x17A0;&#x17B6;&#x1798;&#x179C;&#x17C9;&#x17C3;</option>
+                    <option value="8582">183-183VN 100/800 l99</option>
+                    <option value="10608">184-184&#x17A0;&#x17B6;&#x1798;&#x179C;&#x17C9;&#x17C3;</option>
+                    <option value="11908">187-187B&#x17A0;&#x17B6;&#x1798;&#x179C;&#x17C9;&#x17C3;</option>
+                    <option value="11534">190-190B&#x17A0;&#x17B6;&#x1798;&#x179C;&#x17C9;&#x17C3;</option>
+                    <option value="12475">190-190C&#x17A0;&#x17B6;&#x1798;&#x179C;&#x17C9;&#x17C3;</option>
+                    <option value="10018">190-190D&#x17A0;&#x17B6;&#x1798;&#x179C;&#x17C9;&#x17C3;</option>
+                    <option value="10717">190-190E&#x17A0;&#x17B6;&#x1798;&#x179C;&#x17C9;&#x17C3;</option>
+                    <option value="11656">190-190G&#x17A0;&#x17B6;&#x1798;&#x179C;&#x17C9;&#x17C3;</option>
+                    <option value="11698">190-190H&#x17A0;&#x17B6;&#x1798;&#x179C;&#x17C9;&#x17C3;</option>
+                    <option value="11811">190-190J 90/800</option>
+                    <option value="12338">190-190i &#x17A0;&#x17B6;&#x1798;&#x179C;&#x17C9;&#x17C3;</option>
+                    <option value="9252">191-191M01&#x17A0;&#x17B6;&#x1798;&#x179C;&#x17C9;&#x17C3;</option>
+                    <option value="9271">191-191M02&#x17A0;&#x17B6;&#x1798;&#x179C;&#x17C9;&#x17C3;</option>
+                    <option value="8920">192-192A&#x17A0;&#x17B6;&#x1798;&#x179C;&#x17C9;&#x17C3;</option>
+                    <option value="10817">192-192B 90/800</option>
+                    <option value="11474">192-192C &#x17A0;&#x17B6;&#x1798;&#x179C;&#x17C9;&#x17C3;</option>
+                    <option value="11677">192-192D&#x17A0;&#x17B6;&#x1798;&#x179C;&#x17C9;&#x17C3;</option>
+                    <option value="11742">192-192E&#x17A0;&#x17B6;&#x1798;&#x179C;&#x17C9;&#x17C3;</option>
+                    <option value="12019">192-192H&#x17A0;&#x17B6;&#x1798;&#x179C;&#x17C9;&#x17C3;</option>
+                    <option value="11097">193-193T01 80/800 LC89</option>
+                    <option value="12216">194-194A 90/800 </option>
+                    <option value="11488">194-194B&#x17A0;&#x17B6;&#x1798;&#x179C;&#x17C9;&#x17C3;</option>
+                    <option value="9917">195-195&#x17A0;&#x17B6;&#x1798;&#x179C;&#x17C9;&#x17C3;</option>
+                    <option value="10696">196-196  90/700</option>
+                    <option value="11491">197-197N01&#x17A0;&#x17B6;&#x1798;&#x179C;&#x17C9;&#x17C3;</option>
+                    <option value="12522">197-197N02&#x17A0;&#x17B6;&#x1798;&#x179C;&#x17C9;&#x17C3;</option>
+                    <option value="12536">197-197N04&#x17A0;&#x17B6;&#x1798;&#x179C;&#x17C9;&#x17C3;</option>
+                    <option value="11895">197-197N05&#x17A0;&#x17B6;&#x1798;&#x179C;&#x17C9;&#x17C3;</option>
+                    <option value="9501">197-197N08&#x17A0;&#x17B6;&#x1798;&#x179C;&#x17C9;&#x17C3;</option>
+                    <option value="12009">197-197N09&#x17A0;&#x17B6;&#x1798;&#x179C;&#x17C9;&#x17C3;</option>
+                    <option value="11104">197-197N10&#x17A0;&#x17B6;&#x1798;&#x179C;&#x17C9;&#x17C3;</option>
+                    <option value="12521">197-197N11&#x17A0;&#x17B6;&#x1798;&#x179C;&#x17C9;&#x17C3;</option>
+                    <option value="12293">197-197N14&#x17A0;&#x17B6;&#x1798;&#x179C;&#x17C9;&#x17C3;</option>
+                    <option value="12405">197-197N16&#x17A0;&#x17B6;&#x1798;&#x179C;&#x17C9;&#x17C3;</option>
+                    <option value="12584">198-198S03</option>
+                    <option value="12527">199-199A02&#x17A0;&#x17B6;&#x1798;&#x179C;&#x17C9;&#x17C3;</option>
+                    <option value="7144">199-199A&#x17A0;&#x17B6;&#x1798;&#x179C;&#x17C9;&#x17C3;</option>
+                    <option value="11318">200-200 90/800 LC89</option>
+                    <option value="9613">200-J Lin 90/83</option>
+                    <option value="7499">201-201A&#x17A0;&#x17B6;&#x1798;&#x179C;&#x17C9;&#x17C3;</option>
+                    <option value="11699">201-201B&#x17A0;&#x17B6;&#x1798;&#x179C;&#x17C9;&#x17C3;</option>
+                    <option value="11788">201-201C&#x17A0;&#x17B6;&#x1798;&#x179C;&#x17C9;&#x17C3;</option>
+                    <option value="8514">201-201D&#x17A0;&#x17B6;&#x1798;&#x179C;&#x17C9;&#x17C3;</option>
+                    <option value="12540">201-F201 90/800</option>
+                    <option value="5244">203-203A&#x17A0;&#x17B6;&#x1798;&#x179C;&#x17C9;&#x17C3;</option>
+                    <option value="11852">203-203B&#x17A0;&#x17B6;&#x1798;&#x179C;&#x17C9;&#x17C3;</option>
+                    <option value="7298">204-204&#x17A0;&#x17B6;&#x1798;&#x179C;&#x17C9;&#x17C3;</option>
+                    <option value="11188">205-205A&#x17A0;&#x17B6;&#x1798;&#x179C;&#x17C9;&#x17C3;</option>
+                    <option value="11909">205-205D&#x17A0;&#x17B6;&#x1798;&#x179C;&#x17C9;&#x17C3;</option>
+                    <option value="11217">206-206A&#x17A0;&#x17B6;&#x1798;&#x179C;&#x17C9;&#x17C3;</option>
+                    <option value="5781">207-207A&#x17A0;&#x17B6;&#x1798;&#x179C;&#x17C9;&#x17C3;</option>
+                    <option value="11777">207-207B&#x17A0;&#x17B6;&#x1798;&#x179C;&#x17C9;&#x17C3;</option>
+                    <option value="12156">207-207D&#x17A0;&#x17B6;&#x1798;&#x179C;&#x17C9;&#x17C3;</option>
+                    <option value="12155">207-99406393629</option>
+                    <option value="7582">208-208 BTy 90/800</option>
+                    <option value="11244">210-L01&#x17A0;&#x17B6;&#x1798;&#x179C;&#x17C9;&#x17C3;</option>
+                    <option value="11247">210-L02&#x17A0;&#x17B6;&#x1798;&#x179C;&#x17C9;&#x17C3;</option>
+                    <option value="12641">210-L03&#x17A0;&#x17B6;&#x1798;&#x179C;&#x17C9;&#x17C3;</option>
+                    <option value="11336">210-L06&#x17A0;&#x17B6;&#x1798;&#x179C;&#x17C9;&#x17C3;</option>
+                    <option value="11550">210-L07&#x17A0;&#x17B6;&#x1798;&#x179C;&#x17C9;&#x17C3;</option>
+                    <option value="11522">289-289FW&#x1780;&#x17BC;&#x1793; 90/800</option>
+                    <option value="10172">300-300SN05 90/800</option>
+                    <option value="11450">500-CL01&#x17A0;&#x17B6;&#x1798;&#x179C;&#x17C9;&#x17C3;</option>
+                    <option value="11676">501-T01&#x17A0;&#x17B6;&#x1798;&#x179C;&#x17C9;&#x17C3;</option>
+                    <option value="12619">501-T02&#x17A0;&#x17B6;&#x1798;&#x179C;&#x17C9;&#x17C3;</option>
+                    <option value="11603">501-T03&#x17A0;&#x17B6;&#x1798;&#x179C;&#x17C9;&#x17C3;</option>
+                    <option value="12707">501-T04&#x17A0;&#x17B6;&#x1798;&#x179C;&#x17C9;&#x17C3;</option>
+                    <option value="11224">914-914B02&#x17A0;&#x17B6;&#x1798;&#x179C;&#x17C9;&#x17C3;</option>
+                    <option value="11775">L04-E Da</option>
+                    <option value="11630">M01-Mrr55</option>
+                    <option value="7829">1000-Heng Lv</option>
+                    <option value="9079">1002- Lv </option>
+                    <option value="9544">1003-SC</option>
+                    <option value="12466">1234-TY &#x1795;&#x17D2;&#x1791;&#x17C0;&#x1784;</option>
+                    <option value="12183">1234-&#x17A2;&#x17BB;&#x17B8;&#x1787;&#x17BC;&#x179A;</option>
+                    <option value="12554">1234-&#x17A2;&#x17BB;&#x17B8;&#x1787;&#x17BC;&#x179A;2</option>
+                    <option value="12572">1236-93%</option>
+                    <option value="12595">1237-&#x1798;&#x17C9;&#x17C1;&#x1784; (T)</option>
+                    <option value="11344">6869-6869 KKA 90/800</option>
+                    <option value="12149">7777-7777E&#x17A0;&#x17B6;&#x1798;&#x179C;&#x17C9;&#x17C3;</option>
+                    <option value="11650">8586-&#x1794;&#x1784;&#x179C;&#x17B7;&#x1786;&#x17D0;&#x1799;</option>
+                    <option value="11615">8688-&#x1794;&#x1784;&#x179F;&#x1798;&#x17D2;&#x1794;&#x178F;&#x17D2;&#x178F;&#x17B7; &#x1795;&#x17D2;&#x179F;&#x17B6;&#x179A;&#x1790;&#x17D2;&#x1798;&#x17B8;</option>
+                    <option value="11057">AD01-AD01new</option>
+                    <option value="8959">MEY1-MEY1 VN 90/800</option>
+                    <option value="11552">SN05-SN05 90/800</option>
+                    <option value="11581">123456-Leak Hk</option>
+                    <option value="11622">90/800-KE01</option>
+                    <option value="9551">B Sna -B Sna </option>
+        </select>
+        <select id="viewType" class="custom-input" style="width:90px">
+            <option value="0">ស៊ីសង</option>
+            <option value="1">បញ្ជីលេខ</option>
+        </select> 
+        <div class="viewType-items viewType-0" style="display:contents;">
+            <label class="custom-label">ស៊ីសង</label>
+            <input style="zoom:1.5;" type="checkbox" id="isPayment" />
+        </div>
+        <select id="lottery" class="custom-input viewType-items viewType-1" style="width:120px;display:none">
+            <option value="">ឆ្នោត</option> 
+                <option value="1">&#x1786;&#x17D2;&#x1793;&#x17C4;&#x178F;&#x1799;&#x17BD;&#x1793;</option>
+                <option value="3">Thinhnam</option>
+                <option value="2">&#x1786;&#x17D2;&#x1793;&#x17C4;&#x178F;&#x1781;&#x17D2;&#x1798;&#x17C2;&#x179A;</option>
+                <option value="5">&#x1781;&#x17D2;&#x1798;&#x17C2;&#x179A;&#x1799;&#x17BC;&#x1792;&#x17BC;&#x1794;</option>
+                <option value="4">&#x1786;&#x17D2;&#x1793;&#x17C4;&#x178F;&#x1790;&#x17C3;</option>
+        </select>
+    </div>
+    <div class="row" style="padding-top:15px;">
+        <table cellpadding="0" cellspacing="0" style="width:100%;">
+            <tbody>
+                <tr height="11">
+                    <td width="11" background="./assets/css/img/left_top.png"></td>
+                    <td background="./assets/css/img/top.png" height="11"></td>
+                    <td width="11" background="./assets/css/img/right_top.png"></td>
+                </tr>
+                <tr height="11">
+                    <td width="11" background="./assets/css/img/left.png"></td>
+                    <td id="accountingList">
+                    </td>
+                    <td width="11" background="./assets/css/img/right.png"></td>
+                </tr>
+                <tr>
+                    <td width="11" background="./assets/css/img/left_bottom.png"></td>
+                    <td background="./assets/css/img/bottom.png" height="11"></td>
+                    <td width="11" background="./assets/css/img/right_bottom.png"></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+<section style="clear:both" id="commissionCalculator" aria-labelledby="commissionHeading">
+        <h2 id="commissionHeading">Commission</h2>
+        <div class="commission-scroll">
+            <table>
+                <thead><tr><th scope="col">Type</th><th scope="col">Rate (%)</th><th scope="col">Report total (៛)</th><th scope="col">Commission (៛)</th><th scope="col">Report total ($)</th><th scope="col">Commission ($)</th></tr></thead>
+                <tbody>
+                    <tr><th scope="row">2D</th><td><input id="commissionRate2D" aria-label="2D commission rate (%)" type="number" min="0" step="any" placeholder="%" autocomplete="off"></td><td id="commissionBase2DKhr">—</td><td id="commission2DKhr">—</td><td id="commissionBase2DUsd">—</td><td id="commission2DUsd">—</td></tr>
+                    <tr><th scope="row">3D</th><td><input id="commissionRate3D" aria-label="3D commission rate (%)" type="number" min="0" step="any" placeholder="%" autocomplete="off"></td><td id="commissionBase3DKhr">—</td><td id="commission3DKhr">—</td><td id="commissionBase3DUsd">—</td><td id="commission3DUsd">—</td></tr>
+                </tbody>
+                <tfoot><tr><th scope="row" colspan="3">Total commission</th><td id="commissionTotalKhr">—</td><td></td><td id="commissionTotalUsd">—</td></tr></tfoot>
+            </table>
+        </div>
+        
+    </section>
+<section id="shareCalculator" aria-labelledby="shareHeading">
+    <h2 id="shareHeading">Share</h2>
+    <div class="share-scroll">
+        <table>
+            <thead><tr><th scope="col">Rate (%)</th><th scope="col">Report total (៛)</th><th scope="col">Report total ($)</th><th scope="col">Share (៛)</th><th scope="col">Share ($)</th></tr></thead>
+            <tbody><tr><td><input id="shareRate" type="number" min="0" step="any" value="20" autocomplete="off" aria-label="Share percentage"></td><td id="shareBaseKhr">—</td><td id="shareBaseUsd">—</td><td><output id="shareResultKhr" aria-live="polite">—</output></td><td><output id="shareResultUsd" aria-live="polite">—</output></td></tr></tbody>
+        </table>
+    </div>
+</section>
+</div>
+
+
+    </div>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+
+
+<template id="previewCommissionReport"><table width="100%" class="table-row" align="center" cellspacing="0" cellpadding="0">
+    <thead>
+        <tr>
+            <th class="classtd1" rowspan="2">ថ្ងៃ</th>
+            <th class="classtd1" colspan="2">លទ្ធផល</th>
+            <th class="classtd1" colspan="2">ចាក់ 2D</th>
+            <th class="classtd1" colspan="2">ចាក់ 3D</th>
+            <th class="classtd1" colspan="2">ឈ្នះ 2D</th>
+            <th class="classtd1" colspan="2">ឈ្នះ 3D</th>
+        </tr>
+        <tr>
+            <th class="classtd">(៛)</th>
+            <th class="classtd">($)</th>
+            <th class="classtd">(៛)</th>
+            <th class="classtd">($)</th>
+            <th class="classtd">(៛)</th>
+            <th class="classtd">($)</th>
+            <th class="classtd">(៛)</th>
+            <th class="classtd">($)</th>
+            <th class="classtd">(៛)</th>
+            <th class="classtd">($)</th>
+        </tr>
+        </thead>
+    <tbody>
+            <tr align="center" class="tr-row">
+                <td class="classtd">2026-11-01</td>
+                <td class="classtd">948,740</td>
+                <td class="classtd"></td>
+                <td class="classtd">62,000</td>
+                <td class="classtd"></td>
+                <td class="classtd">1,095,000</td>
+                <td class="classtd"></td>
+                <td class="classtd"></td>
+                <td class="classtd"></td>
+                <td class="classtd"></td>
+                <td class="classtd"></td>
+            </tr>
+            <tr align="center" class="tr-row">
+                <td class="classtd">2026-11-02</td>
+                <td class="classtd">428,000</td>
+                <td class="classtd"></td>
+                <td class="classtd">120,000</td>
+                <td class="classtd"></td>
+                <td class="classtd">1,280,000</td>
+                <td class="classtd"></td>
+                <td class="classtd">560,000</td>
+                <td class="classtd"></td>
+                <td class="classtd">160,000</td>
+                <td class="classtd"></td>
+            </tr>
+            <tr align="center" class="tr-row">
+                <td class="classtd">2026-11-03</td>
+                <td class="classtd">1,451,810</td>
+                <td class="classtd"></td>
+                <td class="classtd">120,000</td>
+                <td class="classtd"></td>
+                <td class="classtd">1,650,500</td>
+                <td class="classtd"></td>
+                <td class="classtd"></td>
+                <td class="classtd"></td>
+                <td class="classtd"></td>
+                <td class="classtd"></td>
+            </tr>
+            <tr align="center" class="tr-row">
+                <td class="classtd">2026-11-04</td>
+                <td class="classtd">133,880</td>
+                <td class="classtd"></td>
+                <td class="classtd"></td>
+                <td class="classtd"></td>
+                <td class="classtd">1,334,000</td>
+                <td class="classtd"></td>
+                <td class="classtd"></td>
+                <td class="classtd"></td>
+                <td class="classtd">960,000</td>
+                <td class="classtd"></td>
+            </tr>
+            <tr align="center" class="tr-row">
+                <td class="classtd">2026-11-05</td>
+                <td class="classtd">-2,077,830</td>
+                <td class="classtd"></td>
+                <td class="classtd">60,000</td>
+                <td class="classtd"></td>
+                <td class="classtd">1,308,500</td>
+                <td class="classtd"></td>
+                <td class="classtd"></td>
+                <td class="classtd"></td>
+                <td class="classtd">3,200,000</td>
+                <td class="classtd"></td>
+            </tr>
+            <tr align="center" class="tr-row">
+                <td class="classtd">2026-11-06</td>
+                <td class="classtd">-14,406,080</td>
+                <td class="classtd"></td>
+                <td class="classtd">20,000</td>
+                <td class="classtd"></td>
+                <td class="classtd">1,436,000</td>
+                <td class="classtd"></td>
+                <td class="classtd"></td>
+                <td class="classtd"></td>
+                <td class="classtd">15,600,000</td>
+                <td class="classtd"></td>
+            </tr>
+            <tr align="center" class="tr-row">
+                <td class="classtd">2026-11-07</td>
+                <td class="classtd">1,486,660</td>
+                <td class="classtd"></td>
+                <td class="classtd">40,000</td>
+                <td class="classtd"></td>
+                <td class="classtd">1,773,000</td>
+                <td class="classtd"></td>
+                <td class="classtd"></td>
+                <td class="classtd"></td>
+                <td class="classtd"></td>
+                <td class="classtd"></td>
+            </tr>
+            <tr align="center" class="tr-row">
+                <td class="classtd">2026-11-08</td>
+                <td class="classtd">921,680</td>
+                <td class="classtd"></td>
+                <td class="classtd">30,000</td>
+                <td class="classtd"></td>
+                <td class="classtd">1,094,000</td>
+                <td class="classtd"></td>
+                <td class="classtd"></td>
+                <td class="classtd"></td>
+                <td class="classtd"></td>
+                <td class="classtd"></td>
+            </tr>
+            <tr align="center" class="tr-row">
+                <td class="classtd">2026-11-09</td>
+                <td class="classtd">-204,360</td>
+                <td class="classtd"></td>
+                <td class="classtd">50,000</td>
+                <td class="classtd"></td>
+                <td class="classtd">1,652,000</td>
+                <td class="classtd"></td>
+                <td class="classtd"></td>
+                <td class="classtd"></td>
+                <td class="classtd">1,600,000</td>
+                <td class="classtd"></td>
+            </tr>
+            <tr align="center" class="tr-row">
+                <td class="classtd">2026-11-10</td>
+                <td class="classtd">283,230</td>
+                <td class="classtd"></td>
+                <td class="classtd">95,000</td>
+                <td class="classtd"></td>
+                <td class="classtd">2,006,500</td>
+                <td class="classtd"></td>
+                <td class="classtd"></td>
+                <td class="classtd"></td>
+                <td class="classtd">1,440,000</td>
+                <td class="classtd"></td>
+            </tr>
+            <tr align="center" class="tr-row">
+                <td class="classtd">2026-11-11</td>
+                <td class="classtd">1,524,790</td>
+                <td class="classtd"></td>
+                <td class="classtd">80,000</td>
+                <td class="classtd"></td>
+                <td class="classtd">1,779,500</td>
+                <td class="classtd"></td>
+                <td class="classtd"></td>
+                <td class="classtd"></td>
+                <td class="classtd"></td>
+                <td class="classtd"></td>
+            </tr>
+            <tr align="center" class="tr-row">
+                <td class="classtd">2026-11-12</td>
+                <td class="classtd">753,900</td>
+                <td class="classtd"></td>
+                <td class="classtd">135,000</td>
+                <td class="classtd"></td>
+                <td class="classtd">1,760,000</td>
+                <td class="classtd"></td>
+                <td class="classtd"></td>
+                <td class="classtd"></td>
+                <td class="classtd">800,000</td>
+                <td class="classtd"></td>
+            </tr>
+            <tr align="center" class="tr-row">
+                <td class="classtd">2026-11-13</td>
+                <td class="classtd">685,590</td>
+                <td class="classtd"></td>
+                <td class="classtd">115,000</td>
+                <td class="classtd"></td>
+                <td class="classtd">2,184,500</td>
+                <td class="classtd"></td>
+                <td class="classtd"></td>
+                <td class="classtd"></td>
+                <td class="classtd">1,200,000</td>
+                <td class="classtd"></td>
+            </tr>
+            <tr align="center" class="tr-row">
+                <td class="classtd">2026-11-14</td>
+                <td class="classtd">845,420</td>
+                <td class="classtd"></td>
+                <td class="classtd">100,000</td>
+                <td class="classtd"></td>
+                <td class="classtd">931,000</td>
+                <td class="classtd"></td>
+                <td class="classtd"></td>
+                <td class="classtd"></td>
+                <td class="classtd"></td>
+                <td class="classtd"></td>
+            </tr>
+            <tr align="center" class="tr-row">
+                <td class="classtd">2026-11-15</td>
+                <td class="classtd">454,600</td>
+                <td class="classtd"></td>
+                <td class="classtd">215,000</td>
+                <td class="classtd"></td>
+                <td class="classtd">1,315,000</td>
+                <td class="classtd"></td>
+                <td class="classtd">800,000</td>
+                <td class="classtd"></td>
+                <td class="classtd"></td>
+                <td class="classtd"></td>
+            </tr>
+    </tbody>
+    <tfoot>
+        <tr>
+            <td class="classtd" align="center"><strong>សរុប</strong></td>
+            <th class="classtd">-6,769,970</th>
+            <th class="classtd"></th>
+            <th class="classtd" data-total="2d-khr">1,242,000</th>
+            <th class="classtd" data-total="2d-usd"></th>
+            <th class="classtd" data-total="3d-khr">22,599,500</th>
+            <th class="classtd" data-total="3d-usd"></th>
+            <th class="classtd">1,360,000</th>
+            <th class="classtd"></th>
+            <th class="classtd">24,960,000</th>
+            <th class="classtd"></th>
+        </tr>
+    </tfoot>
+</table></template>
+<template id="previewShareReport"><table width="100%" class="table-row" align="center" cellspacing="0" cellpadding="0">
+    <thead>
+        <tr>
+            <th class="classtd1" rowspan="2">ថ្ងៃ</th>
+            <th class="classtd1" colspan="2">លទ្ធផល</th>
+            <th class="classtd1" colspan="2">កូនសង</th>
+            <th class="classtd1" colspan="2">កូនខ្ចី</th>
+            <th class="classtd1" colspan="2">តវ៉ា</th>
+            <th class="classtd1" colspan="2">ចាស់</th>
+            <th class="classtd1" colspan="2">ចុងក្រោយ</th>
+        </tr>
+        <tr>
+            <th class="classtd">(៛)</th>
+            <th class="classtd">($)</th>
+            <th class="classtd">(៛)</th>
+            <th class="classtd">($)</th>
+            <th class="classtd">(៛)</th>
+            <th class="classtd">($)</th>
+            <th class="classtd">(៛)</th>
+            <th class="classtd">($)</th>
+            <th class="classtd">(៛)</th>
+            <th class="classtd">($)</th>
+            <th class="classtd">(៛)</th>
+            <th class="classtd">($)</th>
+        </tr>
+    </thead>
+    <tbody>
+
+            <tr align="center" class="tr-row ">
+                <td class="classtd">2026-11-01</td>
+                <td class="classtd">948,700</td>
+                <td class="classtd"></td>
+                <td class="classtd"></td>
+                <td class="classtd"></td>
+                <td class="classtd">1,339,400</td>
+                <td class="classtd"></td>
+                <td class="classtd"></td>
+                <td class="classtd"></td>
+                <td class="classtd">-1,339,444</td>
+                <td class="classtd"></td>
+                <td class="classtd">948,656</td>
+                <td class="classtd"></td>
+            </tr>
+            <tr align="center" class="tr-row no-transac">
+                <td class="classtd">2026-11-02</td>
+                <td class="classtd">428,000</td>
+                <td class="classtd"></td>
+                <td class="classtd"></td>
+                <td class="classtd"></td>
+                <td class="classtd"></td>
+                <td class="classtd"></td>
+                <td class="classtd"></td>
+                <td class="classtd"></td>
+                <td class="classtd">948,656</td>
+                <td class="classtd"></td>
+                <td class="classtd">1,376,656</td>
+                <td class="classtd"></td>
+            </tr>
+            <tr align="center" class="tr-row no-transac">
+                <td class="classtd">2026-11-03</td>
+                <td class="classtd">1,451,800</td>
+                <td class="classtd"></td>
+                <td class="classtd"></td>
+                <td class="classtd"></td>
+                <td class="classtd"></td>
+                <td class="classtd"></td>
+                <td class="classtd"></td>
+                <td class="classtd"></td>
+                <td class="classtd">1,376,656</td>
+                <td class="classtd"></td>
+                <td class="classtd">2,828,456</td>
+                <td class="classtd"></td>
+            </tr>
+            <tr align="center" class="tr-row no-transac">
+                <td class="classtd">2026-11-04</td>
+                <td class="classtd">133,900</td>
+                <td class="classtd"></td>
+                <td class="classtd"></td>
+                <td class="classtd"></td>
+                <td class="classtd"></td>
+                <td class="classtd"></td>
+                <td class="classtd"></td>
+                <td class="classtd"></td>
+                <td class="classtd">2,828,456</td>
+                <td class="classtd"></td>
+                <td class="classtd">2,962,356</td>
+                <td class="classtd"></td>
+            </tr>
+            <tr align="center" class="tr-row no-transac">
+                <td class="classtd">2026-11-05</td>
+                <td class="classtd">-2,077,800</td>
+                <td class="classtd"></td>
+                <td class="classtd"></td>
+                <td class="classtd"></td>
+                <td class="classtd"></td>
+                <td class="classtd"></td>
+                <td class="classtd"></td>
+                <td class="classtd"></td>
+                <td class="classtd">2,962,356</td>
+                <td class="classtd"></td>
+                <td class="classtd">884,556</td>
+                <td class="classtd"></td>
+            </tr>
+            <tr align="center" class="tr-row no-transac">
+                <td class="classtd">2026-11-06</td>
+                <td class="classtd">-14,406,100</td>
+                <td class="classtd"></td>
+                <td class="classtd"></td>
+                <td class="classtd"></td>
+                <td class="classtd"></td>
+                <td class="classtd"></td>
+                <td class="classtd"></td>
+                <td class="classtd"></td>
+                <td class="classtd">884,556</td>
+                <td class="classtd"></td>
+                <td class="classtd">-13,521,544</td>
+                <td class="classtd"></td>
+            </tr>
+            <tr align="center" class="tr-row ">
+                <td class="classtd">2026-11-07</td>
+                <td class="classtd">1,486,700</td>
+                <td class="classtd"></td>
+                <td class="classtd"></td>
+                <td class="classtd"></td>
+                <td class="classtd">13,521,500</td>
+                <td class="classtd"></td>
+                <td class="classtd"></td>
+                <td class="classtd"></td>
+                <td class="classtd">-13,521,544</td>
+                <td class="classtd"></td>
+                <td class="classtd">1,486,656</td>
+                <td class="classtd"></td>
+            </tr>
+            <tr align="center" class="tr-row no-transac">
+                <td class="classtd">2026-11-08</td>
+                <td class="classtd">921,700</td>
+                <td class="classtd"></td>
+                <td class="classtd"></td>
+                <td class="classtd"></td>
+                <td class="classtd"></td>
+                <td class="classtd"></td>
+                <td class="classtd"></td>
+                <td class="classtd"></td>
+                <td class="classtd">1,486,656</td>
+                <td class="classtd"></td>
+                <td class="classtd">2,408,356</td>
+                <td class="classtd"></td>
+            </tr>
+            <tr align="center" class="tr-row no-transac">
+                <td class="classtd">2026-11-09</td>
+                <td class="classtd">-204,400</td>
+                <td class="classtd"></td>
+                <td class="classtd"></td>
+                <td class="classtd"></td>
+                <td class="classtd"></td>
+                <td class="classtd"></td>
+                <td class="classtd"></td>
+                <td class="classtd"></td>
+                <td class="classtd">2,408,356</td>
+                <td class="classtd"></td>
+                <td class="classtd">2,203,956</td>
+                <td class="classtd"></td>
+            </tr>
+            <tr align="center" class="tr-row no-transac">
+                <td class="classtd">2026-11-10</td>
+                <td class="classtd">283,200</td>
+                <td class="classtd"></td>
+                <td class="classtd"></td>
+                <td class="classtd"></td>
+                <td class="classtd"></td>
+                <td class="classtd"></td>
+                <td class="classtd"></td>
+                <td class="classtd"></td>
+                <td class="classtd">2,203,956</td>
+                <td class="classtd"></td>
+                <td class="classtd">2,487,156</td>
+                <td class="classtd"></td>
+            </tr>
+            <tr align="center" class="tr-row no-transac">
+                <td class="classtd">2026-11-11</td>
+                <td class="classtd">1,524,800</td>
+                <td class="classtd"></td>
+                <td class="classtd"></td>
+                <td class="classtd"></td>
+                <td class="classtd"></td>
+                <td class="classtd"></td>
+                <td class="classtd"></td>
+                <td class="classtd"></td>
+                <td class="classtd">2,487,156</td>
+                <td class="classtd"></td>
+                <td class="classtd">4,011,956</td>
+                <td class="classtd"></td>
+            </tr>
+            <tr align="center" class="tr-row no-transac">
+                <td class="classtd">2026-11-12</td>
+                <td class="classtd">753,900</td>
+                <td class="classtd"></td>
+                <td class="classtd"></td>
+                <td class="classtd"></td>
+                <td class="classtd"></td>
+                <td class="classtd"></td>
+                <td class="classtd"></td>
+                <td class="classtd"></td>
+                <td class="classtd">4,011,956</td>
+                <td class="classtd"></td>
+                <td class="classtd">4,765,856</td>
+                <td class="classtd"></td>
+            </tr>
+            <tr align="center" class="tr-row no-transac">
+                <td class="classtd">2026-11-13</td>
+                <td class="classtd">685,600</td>
+                <td class="classtd"></td>
+                <td class="classtd"></td>
+                <td class="classtd"></td>
+                <td class="classtd"></td>
+                <td class="classtd"></td>
+                <td class="classtd"></td>
+                <td class="classtd"></td>
+                <td class="classtd">4,765,856</td>
+                <td class="classtd"></td>
+                <td class="classtd">5,451,456</td>
+                <td class="classtd"></td>
+            </tr>
+            <tr align="center" class="tr-row ">
+                <td class="classtd">2026-11-14</td>
+                <td class="classtd">845,400</td>
+                <td class="classtd"></td>
+                <td class="classtd">2,000,000</td>
+                <td class="classtd"></td>
+                <td class="classtd"></td>
+                <td class="classtd"></td>
+                <td class="classtd"></td>
+                <td class="classtd"></td>
+                <td class="classtd">5,451,456</td>
+                <td class="classtd"></td>
+                <td class="classtd">4,296,856</td>
+                <td class="classtd"></td>
+            </tr>
+            <tr align="center" class="tr-row no-transac">
+                <td class="classtd">2026-11-15</td>
+                <td class="classtd">454,600</td>
+                <td class="classtd"></td>
+                <td class="classtd"></td>
+                <td class="classtd"></td>
+                <td class="classtd"></td>
+                <td class="classtd"></td>
+                <td class="classtd"></td>
+                <td class="classtd"></td>
+                <td class="classtd">4,296,856</td>
+                <td class="classtd"></td>
+                <td class="classtd">4,751,456</td>
+                <td class="classtd"></td>
+            </tr>
+    </tbody>
+    <tfoot>
+        <tr>
+            <td class="classtd" align="center"><strong>សរុប</strong></td>
+            <th class="classtd" data-total="result-khr">-6,770,000</th>
+            <th class="classtd" data-total="result-usd"></th>
+            <th class="classtd">2,000,000</th>
+            <th class="classtd"></th>
+            <th class="classtd">14,860,900</th>
+            <th class="classtd"></th>
+            <th class="classtd"></th>
+            <th class="classtd"></th>
+            <th class="classtd">21,251,940</th>
+            <th class="classtd"></th>
+            <th class="classtd">2,000,000</th>
+            <th class="classtd"></th>
+        </tr>
+    </tfoot>
+</table></template>
+<script src="./demo/local-preview.js?v=cross2"></script>
+<script src="./demo/show-sources.js?v=cross2"></script>
+<script src="./calculators/calculators.js?v=cross2"></script>
+<script src="./demo/local-navigation.js?v=cross2"></script></body>
+</html>

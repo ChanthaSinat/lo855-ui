@@ -1,0 +1,10 @@
+/* Local demo editing affordances; do not include on the real server. */
+#accountingList .preview-editable { cursor: text; min-width: 34px; }
+#accountingList .preview-editable:hover { box-shadow: inset 0 0 0 1px #80a6c3; }
+#accountingList .preview-editable:focus { outline: 2px solid #2d6b9a; outline-offset: -2px; background: #fff8df; }
+#accountingList .preview-editable[aria-invalid="true"] { outline: 2px solid #c00000; outline-offset: -2px; }
+
+/* Currency markers remain outside editable text, so deleting amounts stays simple. */
+#accountingList .preview-editable[data-preview-currency="usd"]:not(:empty)::after { content: "$"; }
+
+#accountingList .preview-editable[data-preview-currency="khr"]:not(:empty)::after { content: "៛"; }

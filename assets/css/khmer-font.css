@@ -1,0 +1,35 @@
+﻿/***Font Khmer CSS*/
+@font-face {
+    font-family: 'fontBattambong';
+    src: url('../fonts/KHMEROSBATTAMBANG.TTF') format('truetype');
+}
+
+@font-face {
+    font-family: 'fontKhmerM1';
+    src: url('../fonts/khmer M1.volt.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'fontHanuman';
+    src: url('../fonts/Hanuman.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'fontKhmerMoul';
+    src: url('../fonts/KHMEROSMUOL.TTF') format('truetype');
+}
+
+.font-M1{
+    font-family: fontKhmerM1;
+}
+
+.font-BT{
+    font-family: fontBattambong;
+}
+
+.font-ML{
+    font-family:fontKhmerMoul;
+}
+.font-HM{
+    font-family: fontHanuman;
+}

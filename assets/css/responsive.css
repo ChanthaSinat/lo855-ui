@@ -1,0 +1,302 @@
+﻿/**Desktop Query*/
+
+/**tab**/
+.tab-container { 
+    min-height:600px;
+}
+
+.tabs {
+    display: flex;
+    border-bottom: 3px solid #007bff;
+}
+
+.tab {
+    flex: 1;
+    padding: 10px;
+    text-align: center;
+    cursor: pointer;
+    background: white;
+    border: 1px solid #ddd;
+    border-bottom: none;
+    font-weight:bold;
+    font-family:'Khmer OS'
+
+}
+
+    .tab.active {
+        background: #007bff;
+        color: white;
+    }
+
+.tab-content {
+    display: none;
+    padding: 15px;
+    border: 1px solid #ddd;
+    background: white;
+    overflow: auto; 
+}
+
+    .tab-content.active {
+        display: block;
+    }
+
+
+    /**results*/
+    .tbl_result {
+        margin: 15px auto 20px auto;
+        min-width: 700px;
+        border-collapse: collapse;
+        font-weight: bold;
+        font-size: 15px;
+    }
+
+        .tbl_result thead {
+            background-color: #cbe7ff;
+        }
+
+        .tbl_result .tbl_total_row td {
+            font-size: 16px;
+        }
+
+        .tbl_result .tbl_total_row tr {
+            line-height: 22px;
+        }
+
+        .tbl_result .tbl_total_row:before {
+            /* This doesn't work because of border-collapse */
+            line-height: 0.4em;
+            content: ".";
+            color: white; /* bacground color */
+            display: block;
+        }
+
+        .tbl_result .tbl_total_row:after {
+            /* This doesn't work because of border-collapse */
+            line-height: 0.8em;
+            content: ".";
+            color: white; /* bacground color */
+            display: block;
+        }
+
+        .tbl_result tbody.tbl_data_row {
+            background: #fff;
+            text-align: right;
+        }
+
+        .tbl_result thead tr td {
+            border: 1px solid #808080;
+            padding: 1.5px 6px;
+            text-align: center;
+        }
+
+        .tbl_result tbody.tbl_data_row tr td {
+            border: 1px solid #808080;
+            padding: 1.5px 5px;
+        }
+
+        .tbl_result tfoot {
+            font-size: 17px;
+            line-height: normal;
+        }
+/**sary page*/
+.page-sary a {color:darkred;}
+.tbl-sary table {
+    border-collapse: collapse;
+    background-color:white;
+}
+
+    .tbl-sary table td {
+        border: 1px solid #ccc;
+        padding: 0 4px;
+    }
+
+.tbl-sary .date {
+    font-size: 18px;
+    font-weight: bold;
+    color:red;
+    padding:2px;
+    text-align:center;
+    font-family:'Khmer OS Battambang'
+}
+
+.tbl-sary .post {
+    font-size: 26px;
+    font-weight: bold;
+    text-align: center;
+    line-height: 26px;
+    color: #026699;
+    padding: 4px;
+    vertical-align: central;
+}
+
+.tbl-sary .p-r1 {
+    font-size: 26px;
+    font-weight: bold;
+    text-align: center;
+    line-height: 26px;
+    padding: 4px;
+}
+.tbl-sary .p-a-r1 {
+    font-size: 26px;
+    font-weight: bold;
+    text-align: center;
+    line-height: 26px;
+}
+.tbl-sary .lo-name {
+    text-align: right;
+    font-size: 12px;
+    padding: 2px 4px;
+    line-height: 20px;
+}
+
+.tbl-sary .lo-r1 {
+    font-size: 18px;
+    text-align: right;
+    font-weight: bold;
+    line-height: 20px;
+    color: #353535;
+    padding: 1px 5px;
+}
+/*Tablet Query & /*Mobile Query*/
+@media only screen and (max-device-width:992px) {
+    /**controls*/
+    .custom-btn {
+        font-size: 22px;
+        color: #00008b;
+        margin-left: 5px;
+    }
+
+    .custom-label {
+        font-weight: bold;
+        font-size: 22px;
+        padding: 4px;
+    }
+
+    .custom-input, .custom-select,.custom-date {
+        font-weight: bold;
+        font-size: 22px;
+        color: #00008b;
+        height: 43px;
+        border-radius:0;
+    }
+    .custom-date {
+        height: 40px !important;
+        max-width:120px;
+    }
+        .custom-checkbox {
+            zoom: 1.5;
+        }
+    /**results*/
+    .tbl_result {
+        margin: 15px auto 20px auto;
+        min-width: 700px;
+        border-collapse: collapse;
+        font-weight: bold;
+        font-size: 22px;
+        letter-spacing: -1px;
+    }
+
+        .tbl_result thead {
+            background-color: aliceblue;
+        }
+
+        .tbl_result .tbl_total_row tr {
+            line-height: 35px;
+        }
+
+        .tbl_result .tbl_total_row td {
+            font-size: 24px;
+            padding: 0;
+        }
+
+        .tbl_result .tbl_total_row:before {
+            /* This doesn't work because of border-collapse */
+            line-height: 0.5em;
+            content: ".";
+            color: white; /* bacground color */
+            display: block;
+        }
+
+        .tbl_result .tbl_total_row:after {
+            /* This doesn't work because of border-collapse */
+            line-height: 1em;
+            content: ".";
+            color: white; /* bacground color */
+            display: block;
+        }
+
+        .tbl_result tbody.tbl_data_row {
+            background: #fff;
+        }
+
+        .tbl_result thead tr td {
+            border: 1px solid #000;
+            padding: 2px;
+            text-align:center;
+        }
+
+        .tbl_result tbody.tbl_data_row tr td {
+            border: 1px solid #000;
+            padding: 0px 6px;
+            
+        }
+
+        .tbl_result tfoot {
+            font-size: 27px;
+            line-height: normal;
+        }
+
+/**Sary Mobile*/
+.tab{font-size:20px;}
+.tbl-sary .box{
+    min-width:240px !important;
+}
+    .tbl-sary .date {
+        font-size: 26px;
+        font-weight: bold;
+        color: red;
+        padding: 2px;
+        text-align: center;
+    }
+
+    .tbl-sary .post {
+        font-size: 36px;
+        font-weight: bold;
+        text-align: center;
+        line-height: 36px;
+        color: #026699;
+        padding: 4px;
+        vertical-align: central;
+    }
+
+    .tbl-sary .p-r1 {
+        font-size: 36px;
+        font-weight: bold;
+        text-align: center;
+        line-height: 36px;
+        padding: 4px;
+    }
+
+    .tbl-sary .p-a-r1 {
+        font-size: 36px;
+        font-weight: bold;
+        text-align: center;
+        line-height: 36px;
+    }
+
+    .tbl-sary .lo-name {
+        text-align: right;
+        font-size: 16px;
+        padding: 2px 4px;
+        line-height: 24px;
+    }
+
+    .tbl-sary .lo-r1 {
+        font-size: 28px;
+        text-align: right;
+        font-weight: bold;
+        line-height: 28px;
+        color: #353535;
+        padding: 1px 5px;
+    }
+}

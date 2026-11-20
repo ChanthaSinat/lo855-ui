@@ -1,0 +1,22 @@
+/* Calculator styles only: include alongside the existing server styles. */
+#commissionCalculator, #shareCalculator {
+ margin: 12px 0 0 var(--calculator-offset, 0px);
+ width: calc(100% - var(--calculator-offset, 0px)); max-width: 760px;
+ box-sizing: border-box; font-size: 14px; clear: both;
+}
+#commissionCalculator[hidden], #shareCalculator[hidden] { display: none !important; }
+#commissionCalculator h2, #shareCalculator h2 { margin: 0 0 8px; font-size: 16px; }
+#commissionCalculator .commission-scroll, #shareCalculator .share-scroll { overflow-x: auto; }
+#commissionCalculator table, #shareCalculator table { width: 100%; border-collapse: collapse; }
+#commissionCalculator th, #commissionCalculator td, #shareCalculator th, #shareCalculator td {
+ padding: 8px; border: 1px solid #b7c2d0; text-align: right; white-space: nowrap;
+}
+#commissionCalculator th:first-child, #commissionCalculator td:first-child,
+#shareCalculator th:first-child, #shareCalculator td:first-child { text-align: left; }
+#commissionCalculator thead, #shareCalculator thead { background: #f0f8ff; }
+#commissionCalculator input, #shareCalculator input {
+ box-sizing: border-box; width: 90px; padding: 5px; font: inherit;
+ color: #111; border: 1px solid #aaa; border-radius: 0;
+}
+#commissionCalculator tfoot, #shareCalculator output { font-weight: bold; }
+#shareCalculator .negative { color: #c00000; }
