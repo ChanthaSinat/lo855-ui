@@ -15,7 +15,7 @@
   ]
  };
  function refresh() {
-  document.querySelectorAll('.source-linked').forEach(cell => cell.classList.remove('source-linked','source-blue','source-green','source-purple','source-orange'));
+  document.querySelectorAll('.source-linked,.trace-daily').forEach(cell => cell.classList.remove('source-linked','source-blue','source-green','source-purple','source-orange','trace-daily','trace-2d-khr','trace-2d-usd','trace-3d-khr','trace-3d-usd','trace-result-khr','trace-result-usd'));
   const table = report.querySelector('table');
   const row = table && table.tFoot && table.tFoot.rows[0];
   if (table) Array.from(table.tBodies).forEach(body => Array.from(body.rows).forEach(daily => {
@@ -32,6 +32,13 @@
    }
    const href = './result.html?view=' + view.value + '&date=' + date;
    if (link.getAttribute('href') !== href) link.setAttribute('href',href);
+   (maps[view.value] || []).forEach(([key,id,index,color]) => {
+    const dailyCell = daily.cells[index];
+    if (!dailyCell) return;
+    dailyCell.classList.add('trace-daily','trace-' + key);
+    dailyCell.title = 'Daily amount for 2026-11-01. Click the date to see its matching result-page source. The range total includes all displayed dates.';
+   });
+
   }));
 
   (maps[view.value] || []).forEach(([key,id,index,color]) => {

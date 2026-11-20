@@ -5,7 +5,13 @@
  document.querySelectorAll('[data-result-source]').forEach(cell => {
   const key = cell.dataset.resultSource;
   const belongs = view === '0' ? key.startsWith('result-') : !key.startsWith('result-');
-  if (belongs) cell.classList.add('source-linked',colors[key],'cross-result-source');
+  if (belongs) cell.classList.add('trace-daily','trace-' + key,'cross-result-source');
+  if (belongs) {
+   cell.tabIndex = 0;
+   const goBack = () => { window.location.href = './payment-list.html?view=' + view; };
+   cell.addEventListener('click', goBack);
+   cell.addEventListener('keydown', event => { if (event.key === 'Enter') goBack(); });
+  }
   cell.title = key.startsWith('result-') ? 'Daily result used by Share for 2026-11-01' : 'Raw daily amount used in the Commission report for 2026-11-01';
  });
  const link = document.querySelector('header a[href="./payment-list.html"]');

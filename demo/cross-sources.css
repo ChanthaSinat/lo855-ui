@@ -1,3 +1,13 @@
 #accountingList a[data-report-source] { color: #174f86; text-decoration: underline; text-underline-offset: 3px; }
 .cross-result-source { display: inline-block; min-width: 32px; min-height: 1em; padding: 2px 5px; }
 td.cross-result-source { display: table-cell; }
+
+/* Dashed outlines follow daily values across pages; solid outlines identify totals. */
+.trace-2d-khr { --daily-fill: #dff6f4; --daily-border: #087e83; }
+.trace-2d-usd { --daily-fill: #fff3cf; --daily-border: #916500; }
+.trace-3d-khr { --daily-fill: #ffe4ef; --daily-border: #b33170; }
+.trace-3d-usd { --daily-fill: #e7eaff; --daily-border: #4c59a6; }
+.trace-result-khr { --daily-fill: #e8f2d8; --daily-border: #557c19; }
+.trace-result-usd { --daily-fill: #ffe7db; --daily-border: #b65322; }
+.trace-daily { background: var(--daily-fill) !important; outline: 2px dashed var(--daily-border); outline-offset: -3px; }
+.cross-result-source.trace-daily { cursor: pointer; }

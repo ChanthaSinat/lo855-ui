@@ -85,3 +85,11 @@ while the detail's unrounded intermediate result is 948,740៛. Do not use that
 intermediate result as the Share source. The links explain the captured data;
 editing local demo values does not alter the separate saved result snapshot.
 `demo/result-sources.js` and `demo/cross-sources.css` are demo-only additions.
+
+### Daily versus range totals
+Dashed colors connect a daily amount on result.html to the matching November 1
+amount in payment-list.html. Solid colors connect date-range totals to calculator
+fields. These are intentionally different: a single daily amount is only one
+component of the date-range total. Click the November 1 date to see the daily
+source; click a highlighted daily source on result.html to return. For Share,
+use the rounded daily result (948,700៛), not the intermediate 948,740៛ value.
