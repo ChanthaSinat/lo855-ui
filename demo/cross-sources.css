@@ -7,7 +7,7 @@ td.cross-result-source { display: table-cell; }
 .trace-2d-usd { --daily-fill: #fff3cf; --daily-border: #916500; }
 .trace-3d-khr { --daily-fill: #ffe4ef; --daily-border: #b33170; }
 .trace-3d-usd { --daily-fill: #e7eaff; --daily-border: #4c59a6; }
-.trace-result-khr { --daily-fill: #e8f2d8; --daily-border: #557c19; }
+.trace-result-khr { --daily-fill: #f0e6df; --daily-border: #75452d; }
 .trace-result-usd { --daily-fill: #ffe7db; --daily-border: #b65322; }
 .trace-daily { background: var(--daily-fill) !important; outline: 2px dashed var(--daily-border); outline-offset: -3px; }
 .cross-result-source.trace-daily { cursor: pointer; }

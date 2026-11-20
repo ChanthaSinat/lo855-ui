@@ -4,11 +4,11 @@
  const colors = {'2d-khr':'source-blue','2d-usd':'source-green','3d-khr':'source-purple','3d-usd':'source-orange','result-khr':'source-blue','result-usd':'source-green'};
  document.querySelectorAll('[data-result-source]').forEach(cell => {
   const key = cell.dataset.resultSource;
-  const belongs = view === '0' ? key.startsWith('result-') : !key.startsWith('result-');
+  const belongs = key === '2d-khr' || key === '3d-khr' || key === 'result-khr';
   if (belongs) cell.classList.add('trace-daily','trace-' + key,'cross-result-source');
   if (belongs) {
    cell.tabIndex = 0;
-   const goBack = () => { window.location.href = './payment-list.html?view=' + view; };
+   const goBack = () => { window.location.href = './payment-list.html?view=' + (key.startsWith('result-') ? '0' : '1'); };
    cell.addEventListener('click', goBack);
    cell.addEventListener('keydown', event => { if (event.key === 'Enter') goBack(); });
   }

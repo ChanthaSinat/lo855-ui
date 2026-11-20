@@ -33,6 +33,7 @@
    const href = './result.html?view=' + view.value + '&date=' + date;
    if (link.getAttribute('href') !== href) link.setAttribute('href',href);
    (maps[view.value] || []).forEach(([key,id,index,color]) => {
+    if (key.endsWith('-usd')) return;
     const dailyCell = daily.cells[index];
     if (!dailyCell) return;
     dailyCell.classList.add('trace-daily','trace-' + key);
